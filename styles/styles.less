@@ -2,3 +2,48 @@
 @import "./_classes.less";
 @import "./_global.less";
 @import "./_medias.less";
+
+main {
+    .flex;
+    .row;
+
+    aside {
+        padding-right: 30px;
+
+        nav {
+            .flex;
+            .column;
+        }
+
+        a {
+            padding: 4px 8px;
+            .no-deco;
+        }
+
+        nav#projects {
+            a:nth-of-type(1) {
+                border-top: 1px solid white;
+            }
+
+            a:nth-last-of-type(1) {
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+
+    article {
+        width: 100%;
+        .flex;
+        .column;
+        align-items: center;
+        h2 {
+            margin: 40px 0px 0px 0px;
+        }
+        h2:nth-of-type(1) {
+            margin: 20px 0 0 0;
+        }
+        p {
+            margin-bottom: 0px;
+        }
+    }
+}

@@ -18,15 +18,46 @@
         <h1>Chaos Web Development</h1>
         <h2>A Jordan P. Gerber Company</h2>
     </header>
-
-
+    <main>
+        <aside>
+            <nav>
+                <a href="javascript:void(0)" id="projectHeader">Projects</a>
+                <nav id="projects">
+                    <a href="./projects/cloremining/">>CloreMining</a>
+                    <a href="javascript:void(0)">>Test 1</a>
+                    <a href="javascript:void(0)">>Test 2</a>
+                    <a href="javascript:void(0)">>Test 3</a>
+                </nav>
+            </nav>
+        </aside>
+        <article>
+            <h2>About Me</h2>
+            <p>Something about Mary</p>
+            <h2>Curriculum Vitae</h2>
+            <p>My history</p>
+            <h2>Upcoming Projects</h2>
+            <p>Projects that are in progress:
+                <ul>
+                    <li>Something</li>
+                    <li>Something</li>
+                    <li>Darkside</li>
+                </ul>
+            </p>
+        </article>
+    </main>
     <footer id='copyright'></footer>
 </body>
 <script>
     $(() => {
+        $("#projects").toggle();
         let currentYear = new Date().getFullYear();
         $("#copyright").html(`&copy; 2022 - ${currentYear} | All Rights Reserved | 
         Contact me by <a href='mailto:jordangerber@gmail.com'>E-Mail</a> for any needs or wants.`);
+
+        $("#projectHeader").click(() => {
+            $("#projects").toggle();
+        })
+
     });
 </script>
 

@@ -9,20 +9,24 @@
     <title>Chaos Web Development</title>
     <link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
-    <link rel="manifest" href="./images/site.webmanifest" />
-    <link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/40616cb1b1.js" crossorigin="anonymous"></script>
 </head>
 
-<body></body>
+<body>
+    <header>
+        <h1>Chaos Web Development</h1>
+        <h2>A Jordan P. Gerber Company</h2>
+    </header>
+
+
+    <footer id='copyright'></footer>
+</body>
 <script>
     $(() => {
-        //
+        let currentYear = new Date().getFullYear();
+        $("#copyright").html(`&copy; 2022 - ${currentYear} | All Rights Reserved | 
+        Contact me by <a href='mailto:jordangerber@gmail.com'>E-Mail</a> for any needs or wants.`);
     });
 </script>
 

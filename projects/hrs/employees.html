@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Human Automated Resource Management System</title>
+    <link rel='apple-touch-icon' sizes='180x180' href='./images/apple-touch-icon.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='./images/favicon-16x16.png'>
+    <link rel='manifest' href='./images/site.webmanifest'>
+    <link rel='stylesheet/less' type='text/css' href='styles/employees.less' />
+    <script src='https://cdn.jsdelivr.net/npm/less'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+    <script src='https://kit.fontawesome.com/40616cb1b1.js' crossorigin='anonymous'></script>
+    <script src="./scripts/ajaxer.js"></script>
+</head>
+
+<body>
+    <!-- * This nav is where the 'icons' go to select the info to manage -->
+    <nav>
+        <div class="icon active" id="employees">
+            <i class="fas fa-user"></i>
+            <span>Employees</span>
+        </div>
+        <div class="icon" id="finances">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span>Finances</span>
+        </div>
+        <div class="icon" id="payroll">
+            <i class="fas fa-wallet"></i>
+            <span>Payroll</span>
+        </div>
+    </nav>
+    <!-- * Main#window works as the opened 'Application'/'Page' -->
+    <main id="window">
+        <!-- todo The Top Bar will be used do filter employees -->
+        <div id="topBar">
+            <div class="header">Employee ID</div>
+            <div class="header">Last Name</div>
+            <div class="header">First Name</div>
+            <div class="header">Job Title</div>
+            <div class="header">Department</div>
+            <div class="header">Division</div>
+
+            <div class="contenteditable" contenteditable="true"></div>
+            <div class="contenteditable" contenteditable="true"></div>
+            <div class="contenteditable" contenteditable="true"></div>
+            <div class="contenteditable" contenteditable="true"></div>
+            <div class="contenteditable" contenteditable="true"></div>
+            <div class="contenteditable" contenteditable="true"></div>
+        </div>
+        <table id="bottomTable">
+            <tbody id="employeeListing"></tbody>
+        </table>
+    </main>
+</body>
+<script>
+    $(() => {
+        loadEmployees();
+
+        $("div.icon").click(function () {
+            let id = $(this).attr("id");
+            window.location.assign(`./${id}.html`);
+        });
+        $(".contenteditable").keypress(function (e) { return e.which != 13; });
+        $('.contenteditable').on('keyup', function (e) {
+            if (e.which != 13 && e.which != 17 && e.which != 18) {
+                filterEmployees.call(this, 'eid');
+            }
+        });
+    });
+
+    function filterEmployees(cat) {
+        let thisVal = $(this).text();
+        console.warn(cat);
+        console.error(thisVal);
+    }
+
+
+</script>
+
+</html>

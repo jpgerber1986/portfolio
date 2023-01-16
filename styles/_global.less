@@ -2,6 +2,7 @@
 @import "./_classes.less";
 
 body {
+    max-width: 1200px;
     .flex;
     .column;
     flex: 1 1;
@@ -12,12 +13,21 @@ body {
 
 header {
     .flex;
-    .column;
-    align-items: center;
-    margin-bottom: 20px;
+    .row;
 
-    * {
-        .zpm;
+    div.image {
+        width: 10em;
+        margin: 5px auto 20px 5px;
+        .flex;
+        .row;
+    }
+
+    div.header {
+        margin: 5px auto 20px 10px;
+
+        * {
+            .zpm;
+        }
     }
 }
 

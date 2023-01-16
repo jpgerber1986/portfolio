@@ -7,27 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Chaos Web Developmenet is a DBA by Jordan P Gerber." />
     <title>Chaos Web Development</title>
-    <link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/40616cb1b1.js" crossorigin="anonymous"></script>
+    <link rel='apple-touch-icon' sizes='180x180' href='./images/apple-touch-icon.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='./images/favicon-16x16.png'>
+    <link rel='manifest' href='./images/site.webmanifest'>
+    <link rel='stylesheet/less' type='text/css' href='styles/styles.less' />
+    <script src='https://cdn.jsdelivr.net/npm/less'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+    <script src='https://kit.fontawesome.com/40616cb1b1.js' crossorigin='anonymous'></script>
 </head>
 
 <body>
     <header>
-        <h1>Chaos Web Development</h1>
-        <h2>A Jordan P. Gerber Company</h2>
+        <div class="image">
+            <img src="./images/icon.png" alt="Chaos Logo">
+        </div>
+        <div class="header warning">
+            <h1>Chaos Web Development</h1>
+            <h2>A Jordan P. Gerber Company</h2>
+        </div>
     </header>
     <main>
         <aside>
             <nav>
                 <a href="javascript:void(0)" id="projectHeader">Projects</a>
                 <nav id="projects">
-                    <a href="./projects/cloremining/">>CloreMining</a>
-                    <a href="javascript:void(0)">>Test 1</a>
-                    <a href="javascript:void(0)">>Test 2</a>
-                    <a href="javascript:void(0)">>Test 3</a>
+                    <span>Completeds</span>
+                    <a href="https://kawpow.digital/clore/" target="_blank">CloreMining</a>
+                    <a href="https://meowmining.org/" target="_blank">MeowMining.org</a>
+                    <spanc class="alert">Works In Progress</spanc>
+                    <a href="./projects/hrs/">HR Management</a>
+                    <a href="./projects/finance/">Debt Reduction</a>
                 </nav>
+                <a href="https://github.com/jpgerber1986" target="_blank">GitHub</a>
             </nav>
         </aside>
         <article>
@@ -36,13 +48,19 @@
             <h2>Curriculum Vitae</h2>
             <p>My history</p>
             <h2>Upcoming Projects</h2>
-            <p>Projects that are in progress:
-                <ul>
-                    <li>Something</li>
-                    <li>Something</li>
-                    <li>Darkside</li>
-                </ul>
+            <p class="warning">Projects that are in progress:
+            <ul>
+                <li>Updating CloreMining</li>
+                <li>Updating MeowMining</li>
+            </ul>
             </p>
+            <p class="warning">Projects that have not started:</p>
+            <ul>
+                <li>Human Resources System</li>
+                <li>Resource Management System (Telemedicine/Telehealth)</li>
+                <li>Inventory Management System</li>
+                <li>Household Electronic Health System</li>
+            </ul>
         </article>
     </main>
     <footer id='copyright'></footer>

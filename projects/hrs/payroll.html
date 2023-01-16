@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Human Automated Resource Management System</title>
+    <link rel='apple-touch-icon' sizes='180x180' href='./images/apple-touch-icon.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='./images/favicon-16x16.png'>
+    <link rel='manifest' href='./images/site.webmanifest'>
+    <link rel='stylesheet/less' type='text/css' href='styles/styles.less' />
+    <script src='https://cdn.jsdelivr.net/npm/less'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+    <script src='https://kit.fontawesome.com/40616cb1b1.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+    <!-- * This nav is where the 'icons' go to select the info to manage -->
+    <nav>
+        <div class="icon" id="employees">
+            <i class="fas fa-user"></i>
+            <span>Employees</span>
+        </div>
+        <div class="icon" id="finances">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span>Finances</span>
+        </div>
+        <div class="icon" id="payroll">
+            <i class="fas fa-wallet"></i>
+            <span>Payroll</span>
+        </div>
+    </nav>
+    <!-- * Main#window works as the opened 'Application'/'Page' -->
+    <main id="window">
+        <h1>Payroll!</h1>
+    </main>
+</body>
+<script>
+    $(() => {
+        $("div.icon").click(function () {
+            let id = $(this).attr("id");
+            window.location.assign(`./${id}.html`);
+        });
+    });
+</script>
+
+</html>

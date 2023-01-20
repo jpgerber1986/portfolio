@@ -11,10 +11,9 @@
     <link rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png'>
     <link rel='icon' type='image/png' sizes='16x16' href='./images/favicon-16x16.png'>
     <link rel='manifest' href='./images/site.webmanifest'>
-    <link rel='stylesheet/less' type='text/css' href='styles/styles.less' />
-    <script src='https://cdn.jsdelivr.net/npm/less'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
-    <script src='https://kit.fontawesome.com/40616cb1b1.js' crossorigin='anonymous'></script>
+    <link rel='stylesheet/less' type='text/css' href='./styles/styles.less' />
+    <script src='./assets/lesscss/lesscss.js'></script>
+    <script src='./assets/jquery/jquery363.min.js'></script>
 </head>
 
 <body>
@@ -30,43 +29,97 @@
     <main>
         <aside>
             <nav>
-                <a href="javascript:void(0)" id="projectHeader">Projects</a>
+                <a href="javascript:void(0)" id="projectHeader" class="title">Projects</a>
                 <nav id="projects">
-                    <span>Completeds</span>
-                    <a href="https://kawpow.digital/clore/" target="_blank">CloreMining</a>
-                    <a href="https://meowmining.org/" target="_blank">MeowMining.org</a>
-                    <spanc class="alert">Works In Progress</spanc>
-                    <a href="./projects/hrs/">HR Management</a>
-                    <a href="./projects/finance/">Debt Reduction</a>
+                    <ul>
+                        <span class="warning">Completed</span>
+                        <li><a href="https://kawpow.digital/clore/" target="_blank">CloreMining</a></li>
+                        <li><a href="https://meowmining.org/" target="_blank">MeowMining.org</a></li>
+                    </ul>
+                    <ul>
+                        <span class="warning">In Progress</span>
+                        <li><a href="./projects/hrs/">HR Management</a></li>
+                        <li><a href="./projects/finance/">Debt Reduction</a></li>
+                    </ul>
                 </nav>
-                <a href="https://github.com/jpgerber1986" target="_blank">GitHub</a>
+                <a href="https://github.com/jpgerber1986" target="_blank" class="title">GitHub</a>
             </nav>
         </aside>
         <article>
-            <h2>About Me</h2>
-            <p>Something about Mary</p>
-            <h2>Curriculum Vitae</h2>
-            <p>My history</p>
-            <h2>Upcoming Projects</h2>
-            <p class="warning">Projects that are in progress:
-            <ul>
-                <li>Updating CloreMining</li>
-                <li>Updating MeowMining</li>
-            </ul>
-            </p>
-            <p class="warning">Projects that have not started:</p>
-            <ul>
-                <li>Human Resources System</li>
-                <li>Resource Management System (Telemedicine/Telehealth)</li>
-                <li>Inventory Management System</li>
-                <li>Household Electronic Health System</li>
-            </ul>
+
+            <div class="card">
+                <h2>About Me</h2>
+                <p>
+                    I am <span id="age"></span> year old, Neuro-Divergent, programmer. I began programming when I was
+                    about 12 years old.
+                    I started with VRML and VRML2.0 back when 3d was first starting to become a thing. I then moved on
+                    to HTML and PHP. When CSS started becoming popular, I began learning that too. Javascript was my
+                    late one. I started learning it just a few years ago, along with jQuery and AJAX (typically jQuery
+                    based AJAX).
+                </p>
+                <p>
+                    Below, you'll find a list of my completed projects, projects I am working on, and projects I have
+                    planned, with links to any available.
+                </p>
+                <p>
+                    You'll also find a list of any certificates, classes, badges, or other "awards" I've received
+                    related to my programming training/journey.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Curriculum Vitae</h2>
+                <div class="card-box">
+                    <div class="card">
+                        LinkedIn Skill Assessed HTML
+                    </div>
+                    <div class="card">
+                        LinkedIn Skill Assessed CSS
+                    </div>
+                </div>
+                <div class="card-box">
+                    <div class="card">
+                        <a
+                            href="https://www.linkedin.com/learning/certificates/be8bdd1dc19a3f4feb2addf3187720560b8235aa72e5e92f9a516ba623b30bdf?u=2074148">
+                            <img src="https://media.licdn.com/dms/image/C561FAQHYHPEVXCfz3A/feedshare-document-cover-images_1280/0/1674064127421?e=1674842400&v=beta&t=6eKManTOIB_dk3-rHHyHpPW32-TsreApZApe1eUG8zE"
+                                alt="Project Management Tips" class="thumbnail">
+                            Project Management<br>Tips
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a
+                            href="https://www.linkedin.com/learning/certificates/5f37a1dedb1ae7362e9a8f7007607d8000d52f766e5c323bfdd5e3a4ba4e8e85">
+                            <img src="https://media.licdn.com/dms/image/C561FAQFlhXgBWzuOZw/feedshare-document-cover-images_1280/0/1674150486566?e=1674842400&v=beta&t=qzG9l71OlL7BMszl9QjqZj3buzoYD6dwAshE47YovJo"
+                                alt="Customer Service Foundations" class="thumbnail">
+                            Customer Service<br>Foundations
+                        </a>
+                    </div>
+                </div>
+
+                <h3>Completed Projects</h3>
+                <div class="card-box">
+                    <a href="https://kawpow.digital/clore/" target="_blank">
+                        <div class="card">
+                            CloreMining
+                        </div>
+                    </a>
+                    <a href="https://meowmining.org/" target="_blank">
+                        <div class="card">
+                            MeowMining.org
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
         </article>
     </main>
     <footer id='copyright'></footer>
 </body>
 <script>
     $(() => {
+        $("#age").text("36");
         $("#projects").toggle();
         let currentYear = new Date().getFullYear();
         $("#copyright").html(`&copy; 2022 - ${currentYear} | All Rights Reserved | 

@@ -16,38 +16,87 @@ main {
             >* {
                 font-variant: small-caps;
             }
+
+            >nav {
+                width: 10em;
+            }
+
+            a {
+                padding: 4px 8px;
+                .no-deco;
+            }
+
+            .title {
+                font-size: 1.1em;
+            }
+
+            nav#projects {
+
+                ul {
+                    margin: 0px;
+                    padding: 0px;
+                    text-indent: 1em;
+
+                    li {
+                        margin: 0px;
+                        padding: 0px;
+                        text-indent: 1.5em;
+
+                        a:hover {
+                            color: black;
+                            transition: 2s;
+                        }
+                    }
+                }
+
+                ul,
+                ul>li {
+                    list-style: none;
+                }
+            }
         }
 
-        a {
-            padding: 4px 8px;
-            .no-deco;
-        }
 
-        nav#projects {
-            text-indent: 1em;
-        }
-
-        >nav {
-            width: 10em;
-        }
     }
 
     article {
-        width: 100%;
         .flex;
         .column;
-        align-items: center;
+        margin-left: 50px;
 
-        h2 {
-            margin: 40px 0px 0px 0px;
+        .card-box {
+            .flex;
+            .row;
+            flex-wrap: wrap;
         }
 
-        h2:nth-of-type(1) {
-            margin: 20px 0 0 0;
-        }
+        .card {
+            .flex;
+            .column;
+            align-items: center;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 10px;
+            margin: 10px;
 
-        p {
-            margin-bottom: 0px;
+            a {
+                .flex;
+                .column;
+                .no-deco;
+                align-items: center;
+                text-align: center;
+
+                .thumbnail {
+                    width: 50px;
+                }
+
+
+            }
+
+            h2 {
+                text-align: center;
+                .zpm;
+            }
         }
     }
 }
